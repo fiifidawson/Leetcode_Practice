@@ -12,6 +12,5 @@ class Solution:
     def addBinary(self, a: str, b: str) -> str:
         # Convert the binary strings to integers and add them
         toBin = bin(int(a,2) + int(b,2))
-        
         # Return the binary representation of the sum as a string
         return toBin[2:]
