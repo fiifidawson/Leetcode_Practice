@@ -44,7 +44,7 @@ class Solution:
         for i in range(len(s)):
             #count the occurences of each character at index i 
             countS[s[i]] = 1 + countS.get(s[i], 0)#if the character is not in the hashmap, add it with a value of 1
-            countT[t[i]] = 1 + countT.get(t[i], 0)#if the character is not in the hashmap, add it with a value of 1
+            countT[t[i]] = 1 + countT.get(t[i], 0)#if the ch+9aracter is not in the hashmap, add it with a value of 1
             #get() returns the value of the key, if the key does not exist, it returns the default value 0
 
         #Iterate through the hashmap and compare the values

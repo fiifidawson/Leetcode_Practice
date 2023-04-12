@@ -1,0 +1,1 @@
+    toys_to_be_shared = no_toys / no_orphanages
