@@ -61,3 +61,12 @@ class Solution:
         return(ord('A') <= ord(c) <= ord('Z') or #checking if its uppercase
                ord('a') <= ord(c) <= ord('z') or #checking if its lower case
                ord('0') <= ord(c) <= ord('1'))   #checking if its 0 to 9
+    
+
+
+
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        forward_striped_s = [c for c in s.lower() if c.isalnum()]
+        backward_striped_s = forward_striped_s[::-1]
+        return forward_striped_s == backward_striped_s

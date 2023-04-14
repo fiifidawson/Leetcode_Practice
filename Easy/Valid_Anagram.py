@@ -85,3 +85,36 @@ class Solution:
         t = sorted(t)
         #compare the strings
         return s == t
+
+
+
+class Solution(object):
+    def isAnagram(self, s, t):
+        # In case of different length of thpse two strings...
+        if len(s) != len(t):
+            return False
+        for idx in set(s):
+            # Compare s.count(l) and t.count(l) for every index i from 0 to 26...
+            # If they are different, return false...
+            if s.count(idx) != t.count(idx):
+                return False
+        return True     # Otherwise, return true...
+    
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        hashmap = {}
+
+        for c in s:
+            if c not in hashmap:
+                hashmap[c] = 0
+            hashmap[c] += 1
+        
+        for c in t:
+            if c not in hashmap or hashmap[c] == 0:
+                return False
+            hashmap[c] -= 1
+        return True
+        
