@@ -70,3 +70,12 @@ class Solution:
         forward_striped_s = [c for c in s.lower() if c.isalnum()]
         backward_striped_s = forward_striped_s[::-1]
         return forward_striped_s == backward_striped_s
+    
+
+
+
+
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s = s.replace(" ", "").lower()
+        return s == s[::-1]
