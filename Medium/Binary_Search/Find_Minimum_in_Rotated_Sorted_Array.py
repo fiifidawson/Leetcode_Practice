@@ -16,7 +16,7 @@ class Solution:
             # Calculate the midpoint
             midpoint = left + (right - left) // 2
             
-            # Check if the current element is smaller than the previous one
+            # Check if the current element is smaller than the previous one (doesnt go out of bounds)
             if midpoint > 0 and nums[midpoint] < nums[midpoint - 1]:
                 return nums[midpoint]
             # Check if the left part is sorted and right part contains the minimum
@@ -28,3 +28,18 @@ class Solution:
 
         # Return the minimum element found
         return nums[left]
+
+
+
+
+
+class Solution:
+    def findMin(self, nums):
+        l, r = 0, len(nums) - 1
+        while l < r:
+            m = l + (r - l) // 2
+            if nums[m] > nums[r]:
+                l = m + 1
+            else:
+                r = m
+        return nums[l]

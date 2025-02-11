@@ -13,7 +13,7 @@ class Solution:
         for s in strs:
             count = [0] * 26 # a.....z
 
-             # Going through every character in each string
+            # Going through every character in each string
             for c in s:
                # mapping the characters
                count[ord(c) - ord("a")] += 1
